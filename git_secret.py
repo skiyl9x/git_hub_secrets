@@ -77,7 +77,7 @@ def update_secret(login: str, github_token: str, secret_name: str, repository: s
 #Main function. Usage argumets
 def main(argv):
 
-    usage = """Usage: test.py --lg=<github_login> --tk=<github_token> --sn=<secret_name> --repo=<repositoy_name> --filename=<filename_with_sectet>
+    usage = """Usage: git_secret.py --lg=<github_login> --tk=<github_token> --sn=<secret_name> --repo=<repositoy_name> --filename=<filename_with_sectet>
     """
     if len(sys.argv) <= 5:
         print('You must set all parameters!\n'+usage)
