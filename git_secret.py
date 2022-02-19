@@ -41,6 +41,9 @@ def get_public_key(login: str, github_token: str, repository: str) -> json:
     }
     
     response = requests.get(url, headers=headers, auth=(login, github_token))
+    if str(response.status_code) != "200":
+        print('Error with API request for get public key. Status code: '+str(response.status_code))
+        sys.exit(2)
     return json.loads(response.content)
 
 
